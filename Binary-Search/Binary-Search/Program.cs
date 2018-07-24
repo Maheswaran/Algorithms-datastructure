@@ -11,10 +11,35 @@ namespace Binary_Search
         static void Main(string[] args)
         {
             int[] x = GetArrayAsInput();
-            int y = ElementToFindInArray();
+            int y = ElementToFindInArray();            
             int[] sortedArray =  SortArray(x);
             PrintSortedArray(sortedArray);
+            //Console.WriteLine("using builtin search psosition " + (Array.BinarySearch(x, y) + 1));
+            FindElementInArray(sortedArray , y, 0, sortedArray.Length);
             Console.ReadLine();
+        }
+
+        private static void FindElementInArray(int[] sortedArray, int y, int startindex, int endindex)
+        {
+            int med = 0;           
+
+            med = (startindex + endindex) / 2;
+
+            if (y > sortedArray[med])
+            {
+                startindex = med;
+                endindex = sortedArray.Length;
+                FindElementInArray(sortedArray, y, startindex, endindex);
+            }
+            else if (y == sortedArray[med])
+            {
+                Console.WriteLine("The element " + y + " found at " + (med+1) + " position");
+            }
+            else
+            {                
+                endindex = med;
+                FindElementInArray(sortedArray, y, startindex, endindex);
+            }            
         }
 
         private static void PrintSortedArray(int[] sortedArray)

@@ -11,74 +11,9 @@ namespace Binary_Search
         static void Main(string[] args)
         {
             int[] x = GetArrayAsInput();
-            int y = ElementToFindInArray();            
-            int[] sortedArray =  SortArray(x);
-            PrintSortedArray(sortedArray);
-            //Console.WriteLine("using builtin search psosition " + (Array.BinarySearch(x, y) + 1));
-            FindElementInArray(sortedArray , y, 0, sortedArray.Length);
-            Console.ReadLine();
-        }
-
-        private static void FindElementInArray(int[] sortedArray, int y, int startindex, int endindex)
-        {
-            int med = 0;           
-
-            med = (startindex + endindex) / 2;
-
-            if (y > sortedArray[med])
-            {
-                startindex = med;
-                endindex = sortedArray.Length;
-                FindElementInArray(sortedArray, y, startindex, endindex);
-            }
-            else if (y == sortedArray[med])
-            {
-                Console.WriteLine("The element " + y + " found at " + (med+1) + " position");
-            }
-            else
-            {                
-                endindex = med;
-                FindElementInArray(sortedArray, y, startindex, endindex);
-            }            
-        }
-
-        private static void PrintSortedArray(int[] sortedArray)
-        {
-            Console.WriteLine("element in sorted order :");
-            for (int i = 0; i < sortedArray.Length; i++)
-            {
-                Console.WriteLine(sortedArray[i]);
-            }
-        }
-
-        private static int[] SortArray(int[] x)
-        {
-            int temp, iCount =0;
-
-            for (int i = 0; i < x.Length -1; i++)
-            {
-                for (int j = 0; j < x.Length -1; j++)
-                {
-                    if (x[j] > x[j + 1])
-                    {
-                        temp = x[j];
-                        x[j] = x[j + 1];
-                        x[j + 1] = temp;
-                    }
-
-                    iCount++;
-                }
-            }
-
-            return x;
-
-        }
-
-        private static int ElementToFindInArray()
-        {
-            Console.WriteLine("Enter the nunber to be find in array");
-            string findVal = Console.ReadLine();
-            return Convert.ToInt32(findVal);
+            int y = ElementToFindInArray();
+            BinarySearch srch = new BinarySearch();
+            srch.Search(x, y);
         }
 
         private static int[] GetArrayAsInput()
@@ -99,7 +34,7 @@ namespace Binary_Search
 
             while (len != 0)
             {
-                
+
                 int i = Convert.ToInt32(Console.ReadLine());
                 values.Add(i);
                 len--;
@@ -107,5 +42,13 @@ namespace Binary_Search
 
             return values.ToArray();
         }
+        
+        private static int ElementToFindInArray()
+        {
+            Console.WriteLine("Enter the nunber to be find in array");
+            string findVal = Console.ReadLine();
+            return Convert.ToInt32(findVal);
+        }
+        
     }
 }

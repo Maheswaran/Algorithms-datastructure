@@ -1,0 +1,19 @@
+﻿<TestData>
+  <TestInput_method3>
+    <ArrayElements>23;44;56;78;98;13;67</ArrayElements>
+    <ElementTobeFound>56</ElementTobeFound>
+    <elementposition>4</elementposition>
+  </TestInput_method3>
+  <TestInput_method3>
+    <ArrayElements>23;44;56;78;98;13;67</ArrayElements>
+    <ElementTobeFound>13</ElementTobeFound>
+    <elementposition>1</elementposition>
+  </TestInput_method3>
+  <TestInput_method3>
+    <ArrayElements>23;44;56;78;98;13;67</ArrayElements>
+    <ElementTobeFound>78</ElementTobeFound>
+    <elementposition>6</elementposition>
+  </TestInput_method3>
+</TestData>
+
+

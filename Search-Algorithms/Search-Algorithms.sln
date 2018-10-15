@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchAlgorithms", "Binary-Search\SearchAlgorithms.csproj", "{C0C87844-C040-4AD7-ACE6-DE3C64C21F85}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchAlgorithms", "Search-Algorithms\Search-Algorithms.csproj", "{C0C87844-C040-4AD7-ACE6-DE3C64C21F85}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchAlgorithms.Tests", "Binary-Search.Tests\SearchAlgorithms.Tests.csproj", "{B1F4FEFC-B02E-4102-B813-AB169C84D137}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchAlgorithms.Tests", "Search-Algorithms.Tests\Search-Algorithms.Tests.csproj", "{B1F4FEFC-B02E-4102-B813-AB169C84D137}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

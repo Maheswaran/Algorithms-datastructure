@@ -12,6 +12,7 @@ namespace Binary_Search
         {
             int[] x = GetArrayAsInput();
             int y = ElementToFindInArray();
+
             BinarySearch srch = new BinarySearch();
             srch.Search(x, y);
         }

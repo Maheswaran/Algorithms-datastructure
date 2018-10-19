@@ -1,5 +1,6 @@
 # Algorithms-datastructure
-The repository contains the projects which showcase how to use different data structure in C# and algorithms for search sorting
+The repository contains the project samples expalains how to implement various data structure and it's operation on your own.
+Ofcourse C# has some of in built data structures which is given below. we coud use it directly.
     
     a. Search Algorithms
     b. Sorting Algorithms
